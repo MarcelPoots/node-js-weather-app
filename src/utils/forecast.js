@@ -16,7 +16,7 @@ const forecast = (latitude, longitude, callback) => {
             console.log(response.body)
             callback(undefined, response.body.current.weather_descriptions[0] + ". It is currently " + response.body.current.temperature + " degrees out." +
             "The air pressure is " + response.body.current.pressure + '. Wind speed is '+ response.body.current.wind_speed +
-            ' from ' + response.body.current.wind_dir + ' direction. Humidity is ' + response.body.current.humidity + '.' )
+            ' from ' + response.body.current.wind_dir + ' direction. Humidity is ' + response.body.current.humidity + '%.' )
         }
     })
 }

@@ -37,7 +37,7 @@ app.get('/about', (req, res)=>{
 
 app.get('/help', (req, res)=>{
     res.render('help', {
-        title: 'Help page'
+        title: 'Help page',  href:"./css/styles.css"
     })
 })
 
@@ -72,11 +72,11 @@ app.get('/weather', (req, res) =>{
 })
 
 app.get('/help/*', (req, res) =>{
-    res.render('404', {errorMessage:'The help topic could not be found'})
+    res.render('404', {errorMessage:'The help topic could not be found', href:"../css/styles.css"})
 })
 
 app.get('*', (req, res) =>{
-    res.render('404', {errorMessage:'The page could not be found'})
+    res.render('404', {errorMessage:'Error 404: The page could not be found', href:"./css/styles.css"})
 })
 
 app.listen(port, ()=>{
